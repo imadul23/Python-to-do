@@ -1,0 +1,6 @@
+features: 
+1. add to do 
+2. tick to do
+3. edit to do
+5. delete to do
+6. view all to do list
