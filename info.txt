@@ -4,3 +4,9 @@ features:
 3. edit to do
 5. delete to do
 6. view all to do list
+
+process to follow (guideline)
+
+sq lite for local database 
+
+find a GUI for to-do app / python.
