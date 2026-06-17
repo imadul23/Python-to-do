@@ -14,3 +14,6 @@ def addTodo(new_todo):
 addTodo("blabla")
 addTodo("blabla2")
 print(todo_list)
+print(todo_list)
+print(todo_list)
+print(todo_list)
