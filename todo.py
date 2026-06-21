@@ -32,7 +32,7 @@ while True:
             num = int(input("Enter task number to remove: "))
 
             if 1 <= num <= len(tasks):
-                removed = tasks.pop(num  1)
+                removed = tasks.pop(num - 1)
                 print(f"'{removed}' removed.")
             else:
                 print("Invalid task number.")
