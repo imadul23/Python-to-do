@@ -1,8 +1,8 @@
 tasks = []
 
 while True:
-    print("\n===== TO-DO LIST =====")
-    print("1. View Tasks")
+    print("-TO-DO LIST-")
+    print("1. View Due Tasks")
     print("2. Add Task")
     print("3. Remove Task")
     print("4. Exit")
@@ -13,29 +13,29 @@ while True:
         if len(tasks) == 0:
             print("No tasks found.")
         else:
-            print("\nTasks:")
-            for i in range(len(tasks)):
-                print(f"{i + 1}. {tasks[i]}")
+            print(len(tasks))
 
     elif choice == "2":
         task = input("Enter a task: ")
         tasks.append(task)
-        print("Task added successfully!")
+        print("Task added")
 
     elif choice == "3":
         if len(tasks) == 0:
-            print("No tasks to remove.")
+            print("No tasks to remove")
         else:
-            for i in range(len(tasks)):
-                print(f"{i + 1}. {tasks[i]}")
+            i=0 
+            while i<len(tasks):
+                print(f"{i+1}.{tasks[i]}")
+                i+=1
 
-            num = int(input("Enter task number to remove: "))
+                num = int(input("Enter task number: "))
 
-            if 1 <= num <= len(tasks):
-                removed = tasks.pop(num - 1)
-                print(f"'{removed}' removed.")
-            else:
-                print("Invalid task number.")
+                if 1 <= num and num <= len(tasks):
+                    rem=tasks.pop(num-1)
+                    print(f"{rem} removed from the list.")
+                else: 
+                    print("Task number is invalid, try with a valid number")
 
     elif choice == "4":
         print("Goodbye!")
