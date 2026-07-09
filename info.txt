@@ -7,6 +7,6 @@ features:
 
 process to follow (guideline)
 
-sq lite for local database 
+sq lite for local database/ json 
 
 find a GUI for to-do app / python.

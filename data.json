@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "title": "Finish Python assignment",
+        "completed": false,
+        "created_at": "2026-07-04",
+        "due_date": "2026-07-08"
+    },
+    {
+        "id": 2,
+        "title": "Go to the gym",
+        "completed": true,
+        "created_at": "2026-07-01",
+        "due_date": "2026-07-01"
+    }
+]
