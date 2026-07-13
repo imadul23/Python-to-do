@@ -1,10 +1,12 @@
 
 # tasks = []
-
+from datetime import datetime
 import json
 file= open("data.json", "r")
 x=file.read()
 finaldata=json.loads(x)
+
+
 
 def generateID():
     if finaldata:
@@ -16,6 +18,14 @@ def generateID():
         return 1
         # print("The list is empty!")
         
+def dateTime(): 
+    current_time = datetime.now().strftime("%d-%m-%Y %H:%M")
+
+    return str(current_time) 
+
+
+
+
 def updateJSON(data):
     write_file= open("data.json", "w")
     json.dump(data, write_file, indent=4)
@@ -38,6 +48,7 @@ def addTask(taskParam):
     finaldata.append(taskParam)
     # write_file= open("data.json", "w")
     # json.dump(finaldata, write_file, indent=4)
+
     updateJSON(finaldata)
     print("Task added")
 
@@ -84,13 +95,15 @@ while True:
 
     elif choice == "2":
         task_title = input("Enter a task: ")
+        due_date= input("Due date(d-m-y): ")
         newID= generateID()
+        current_time= dateTime()
         new_task = {
             "id": newID,
             "title": task_title,
             "completed": False,
-            "created_at": "2026-07-04",
-            "due_date": "2026-07-08"
+            "created_at": current_time,
+            "due_date": due_date
         }
         addTask(new_task)
         viewAllTasks()
